@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-img {
-  position: relative;
-}
-
 /* Textrutan med knappar */
 .textruta {
   max-width: 550px;
@@ -20,4 +16,7 @@ img {
   border: 2px solid black;
   border-radius: 10px;
   font-family: verdana;
+}
+
+.container {
 }

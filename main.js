@@ -33,8 +33,18 @@ function renderScene() {
     gotoPreviousScene();
   };
 
+  //img-element
+  const imageContainer = document.getElementById("imgContainer");
+
   const image = document.createElement("img");
   image.src = scene.background;
+  image.alt = "scene background";
+  image.classList.add("sceneImg");
+  //imageContainer.append(image);
+
+  document.body.style.backgroundImage = `url('${scene.background}')`;
+  document.body.style.backgroundRepeat = "no-repeat";
+  document.body.style.backgroundSize = "cover";
 }
 
 function goToNextScene(sceneIndex) {
@@ -49,14 +59,16 @@ function gotoPreviousScene() {
   }
 }
 
-let granHuggen = false;
+function huggaGran() {}
 
-function huggaGran() {
-  if (!granHuggen) {
-    let huggChans = Math.random();
-  } else if (huggChans > 0.5) {
-    granHuggen = true;
-    document.getElementById("bakgrund").style.backgroundImage =
-      "url('img/huggen.png')";
-  }
-}
+// let granHuggen = false;
+
+// function huggaGran() {
+//   if (!granHuggen) {
+//     let huggChans = Math.random();
+//   } else if (huggChans > 0.5) {
+//     granHuggen = true;
+//     document.getElementById("bakgrund").style.backgroundImage =
+//       "url('img/huggen.png')";
+//   }
+// }
