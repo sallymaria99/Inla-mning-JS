@@ -25,9 +25,10 @@ const scenes = [
     button2: { text: "Gå till köket", nextSceneIndex: 4 },
   },
   {
-    background: "img/house.png",
+    background: "img/kitchen.png",
     text: "Köket",
     button1: { text: "Baka" },
     button2: { text: "Gå till vardagsrummet", nextSceneIndex: 3 },
+    activeSceneIndex: 4,
   },
 ];
