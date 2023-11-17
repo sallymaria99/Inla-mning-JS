@@ -14,6 +14,12 @@ I köket kan du greppa en pepparkaka och dra runt den, samt placera vart du vill
 
 ### Avgränsningar & svårigheter:
 
-Sidan saknar responsivitet, vilket är nästa steg för att förbättra upplevelsen.
+Sidan saknar responsivitet, vilket är nästa steg för att förbättra upplevelsen. Proportion på bakgrundsbild behöver ändras så den ser bra ut.
 
-Svårighet i början var att man hade stora visioner, för att sedan visa sig att det är alldeles för avancerat för mig att skapa i Javascript i detta skede, därmed är världen ganska så avskalad. Hela arbetet har varit en läroprocess och mycket föll på plats mot slutet.
+Svårighet i början var att man hade stora visioner, för att sedan visa sig att det är alldeles för avancerat för mig att skapa i Javascript i detta skede, därmed är världen ganska så avskalad. Hela arbetet har varit en läroprocess och en del föll på plats mot slutet.
+
+### GitHub Repo
+
+https://github.com/sallymaria99/Inla-mning-JS.git
+
+### GitHub Pages

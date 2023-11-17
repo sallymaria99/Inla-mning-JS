@@ -99,7 +99,7 @@ function renderScene() {
   //så bakgrundsbilden inte repeatar - funkade inte i CSS
   document.body.style.backgroundImage = `url('${scene.background}') no-repeat`;
   document.body.style.backgroundRepeat = "no-repeat";
-  document.body.style.backgroundSize = "cover";
+  document.body.style.backgroundSize = "auto";
 }
 
 function goToNextScene(sceneIndex) {
