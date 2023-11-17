@@ -2,14 +2,14 @@ let activeSceneIndex = 0;
 const scenes = [
   {
     background: "img/Start.png",
-    text: " Hej, kul att du vill fira jul med oss! Vi har mycket att förbereda och du måste hjälpa oss. Vill du gå till skogen, in i huset eller göra ett julquiz?",
+    text: "Hej, kul att du vill fira jul med oss! Vi har mycket att förbereda och du måste hjälpa oss. Vill du gå till skogen, in i huset eller göra ett julquiz?",
     button1: { text: "Gå till skogen", nextSceneIndex: 1 },
     button2: { text: "Gå in i huset", nextSceneIndex: 3 },
     button3: { text: "JULQUIZ", nextSceneIndex: 6 },
   },
   {
     background: "img/forest.png",
-    text: "Nu är du i skogen. Kan du hjälpa mig hugga en gran? Klicka på",
+    text: "Nu är du i skogen. Kan du hjälpa mig hugga en gran?",
     button1: { text: "Hugga gran", nextSceneIndex: 2 },
     button2: { text: "Gå in i huset", nextSceneIndex: 3 },
     button3: { text: "Gå till start", nextSceneIndex: 0 },
@@ -30,7 +30,7 @@ const scenes = [
   },
   {
     background: "img/kitchen.png",
-    text: "Nu är vi i köket, varsågod ta en pepparkaka",
+    text: "Nu är vi i köket, varsågod ta en pepparkaka eller gör julquizet.",
     button1: { text: "Gör ett quiz" },
     button2: { text: "Gå till vardagsrummet", nextSceneIndex: 3 },
     button3: { text: "Avsluta julvärlden", nextSceneIndex: 5 },
