@@ -9,6 +9,7 @@ function renderScene() {
   const btn1 = document.getElementById("btn1");
   const btn2 = document.getElementById("btn2");
   const btnBack = document.getElementById("btnBack"); //tillbaka-knapp
+  const btn3 = document.getElementById("btn3");
 
   const scene = scenes[activeSceneIndex];
 
@@ -17,13 +18,19 @@ function renderScene() {
   btn1.textContent = scene.button1.text;
   btn2.textContent = scene.button2.text;
 
-  // Synlighet av ginger
+  // När gingerbread får synas
   gingerVisibility(activeSceneIndex);
 
   if (activeSceneIndex > 0) {
     btnBack.style.display = "block";
   } else {
     btnBack.style.display = "none";
+  }
+
+  if (activeSceneIndex !== 0) {
+    btnQuiz.style.display = "none";
+  } else {
+    btnQuiz.style.display = "flex";
   }
 
   btn1.onclick = function () {
@@ -35,6 +42,7 @@ function renderScene() {
   btnBack.onclick = function () {
     gotoPreviousScene();
   };
+  // btnQuiz.onclick = function goToQuiz() {};
 
   //img-element
   const imageContainer = document.getElementById("imgContainer");
@@ -77,24 +85,71 @@ function gingerVisibility(sceneIndex) {
   }
 }
 
-// gingerContainers.forEach((container, index) => {
-//   if (index === sceneIndex) {
-//     gingercontainer.classList.add("visible");
-//   } else {
-//     container.classList.remove("visible");
-//   }
-// });
+// Allt för pepparkakan
 
-function huggaGran() {}
+let gingerX = 0;
+let gingerY = 0;
+let isDrag = false;
 
-// let granHuggen = false;
+function DragDrop() {
+  const ginger = document.getElementById("gingerbread");
 
-// function huggaGran() {
-//   if (!granHuggen) {
-//     let huggChans = Math.random();
-//   } else if (huggChans > 0.5) {
-//     granHuggen = true;
-//     document.getElementById("bakgrund").style.backgroundImage =
-//       "url('img/huggen.png')";
-//   }
+  ginger.addEventListener("mousedown", function (e) {
+    isDrag = true;
+
+    gingerX = e.clientX - ginger.offsetLeft;
+    gingerY = e.clientY - ginger.offsetTop;
+
+    e.preventDefault();
+  });
+
+  document.addEventListener("mousemove", function (e) {
+    if (isDrag) {
+      ginger.style.left = e.clientX - gingerX + "px";
+      ginger.style.top = e.clientY - gingerY + "px";
+    }
+  });
+
+  document.addEventListener("mouseup", function () {
+    isDrag = false;
+  });
+
+  ginger.addEventListener("dragstart", function (e) {
+    e.dataTransfer.setData("text/plain", "Gingerbread");
+
+    e.dataTransfer.setData("gingerX", e.clientX);
+    e.dataTransfer.setData("gingerY", e.clientY);
+  });
+  document.addEventListener("dragover", function (e) {
+    e.preventDefault();
+
+    gingerX = e.clientX - e.dataTransfer.getData("gingerX");
+    gingerY = e.clientY - e.dataTransfer.getData("gingerY");
+
+    ginger.style.left = gingerX + "px";
+    ginger.style.top = gingerY + "px";
+  });
+}
+
+DragDrop();
+
+// JULKULOR
+//     ++ LÄGG TILL btn1.onclick = function (btn1 är typ JA -- och då är functionen huggagran ett if o else blir nextscenIndex)
+function placeCircle(event) {
+  if (activeSceneIndex === 3) {
+    console.log(event.x, event.y);
+    const circle = document.createElement("div");
+    circle.className = "circle";
+    circle.style.left = event.clientX + "px";
+    circle.style.top = event.clientY + "px";
+    document.body.append(circle);
+  }
+}
+
+document.addEventListener("click", placeCircle);
+
+// document.getElementById("btnQuiz").addEventListener("click", goToQuiz);
+// btnQuiz.onclick;
+// function goToQuiz() {
+//   const goToQuiz = activeSceneIndex === 4;
 // }
