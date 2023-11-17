@@ -23,3 +23,5 @@ Svårighet i början var att man hade stora visioner, för att sedan visa sig at
 https://github.com/sallymaria99/Inla-mning-JS.git
 
 ### GitHub Pages
+
+https://sallymaria99.github.io/Inla-mning-JS/
