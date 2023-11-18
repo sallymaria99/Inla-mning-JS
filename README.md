@@ -20,7 +20,7 @@ Svårighet i början var att man hade stora visioner, för att sedan visa sig at
 
 ### GitHub Repo
 
-https://github.com/sallymaria99/Inla-mning-JS.git
+(https://github.com/sallymaria99/Inla-mning-JS.git)
 
 ### GitHub Pages
 
